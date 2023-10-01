@@ -1,0 +1,60 @@
+### get chats
+GET 'http://localhost:5000/api/chats'
+
+### get chat
+GET 'http://localhost:5000/api/chats/617a518c4081150016472c78'
+
+### register user
+POST http://localhost:5000/api/user
+Content-Type: application/json
+
+{
+    "name": "bate",
+    "email": "bate@gmail.com",
+    "password": "123456"
+}
+
+
+### login user
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "bote@gmail.com",
+    "password": "123456"
+}
+
+### search user
+GET http://localhost:5000/api/user?search=fedasa
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmRjMGUxZTAzNmJmNjdmNjhlZmRmOSIsImlhdCI6MTY5NDM3MTE2OCwiZXhwIjoxNjk2OTYzMTY4fQ.aMKBj87FaWCqB_GLFoEPhcnM3IQs_nCbuRKZJQdLui4
+
+### access chats
+POST  http://localhost:5000/api/chats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmUxYmVmYTI2NGFhNzgxMDUyN2EyNyIsImlhdCI6MTY5NDM3NDg5NSwiZXhwIjoxNjk2OTY2ODk1fQ.O8MT02SAsbpHN6XB7RhRkhIabGi-c-9LRDkMQnjlF1o
+Content-Type: "application/json"
+
+{  
+    "email": "fedasagete@gmail.com",
+    "userId":"64fe1c17a264aa7810527a2a"
+}
+
+###
+GET   http://localhost:5000/api/chats
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmUxYmVmYTI2NGFhNzgxMDUyN2EyNyIsImlhdCI6MTY5NDM3NDg5NSwiZXhwIjoxNjk2OTY2ODk1fQ.O8MT02SAsbpHN6XB7RhRkhIabGi-c-9LRDkMQnjlF1o
+
+
+
+###sending new message
+
+POST  http://localhost:5000/api/messages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmUzNTM1Y2I0YWJmODFhYjIyZTk3MCIsImlhdCI6MTY5NDcwMjIzNSwiZXhwIjoxNjk3Mjk0MjM1fQ.MzFAux7L_J2fqCitccVGq9upz5yks1DG54Bn9u8wJ14
+Content-Type: "application/json"
+
+{  
+    "chatId":"64fe3643d38bc8b210a53390",
+    "content":"hey guys"
+}
+
+###
+GET   http://localhost:5000/api/messages/64fe3643d38bc8b210a53390
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZmUzNTM1Y2I0YWJmODFhYjIyZTk3MCIsImlhdCI6MTY5NDcwMjIzNSwiZXhwIjoxNjk3Mjk0MjM1fQ.MzFAux7L_J2fqCitccVGq9upz5yks1DG54Bn9u8wJ14
