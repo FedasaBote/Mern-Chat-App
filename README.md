@@ -1,3 +1,3 @@
 # MERN Chat App
 
-![Chat App]["./Chat.png"]
+![Chat App](./Chat.png)
